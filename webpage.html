@@ -1,0 +1,121 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daisy 🌼</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: rgb(118, 64, 11);
+      }
+
+      h2 {
+        text-align: center;
+        background: linear-gradient(
+          65deg,
+          rgb(113, 232, 134) 0%,
+          rgb(139, 102, 241) 100%
+        );
+        border: 1px solid rgb(11, 214, 35);
+        padding: 15px;
+        border-radius: 10px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 15px;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+        margin: 20px 0 10px;
+      }
+
+      button {
+        display: block;
+        margin: 20px auto;
+        background: radial-gradient(
+          rgb(249, 249, 234) 0%,
+          rgb(139, 102, 241) 100%
+        );
+        color: rgb(118, 64, 11);
+        padding: 15px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 6px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .container {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 15px 60px;
+      }
+      .readMore {
+        color: rgb(179, 0, 255);
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .readMore:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        text-align: center;
+        font-size: 16px;
+        color: rgb(118, 64, 11);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌼 Daisy 🌼</h1>
+      <h2>The Most Beautiful Flower</h2>
+      <img
+        src="https://hips.hearstapps.com/hmg-prod/images/black-eyed-susan-flower-royalty-free-image-1725904065.jpg?crop=0.546xw:1.00xh;0.104xw,0&resize=980:*"
+      />
+
+      <p>
+        As a flower, daisies symbolize innocence, purity, loyalty, patience, and
+        simplicity. The classic white daisy is associated with humility, while
+        the more rare blue Marguerite daisy hints at openness and peace.
+      </p>
+      <a
+        class="readMore"
+        href="https://www.bhg.com/gardening/flowers/daisy-facts/#:~:text=As%20a%20flower%2C%20daisies%20symbolize,hints%20at%20openness%20and%20peace."
+        >More about Daisy 🌼</a
+      >
+      <button class="chooseFlower">👉 Choose Your Favourite Flower</button>
+      <hr />
+      <p class="footer">
+        <em>This page was built by Nan Pyae</em>
+      </p>
+    </div>
+    <script>
+      function choose() {
+        let name = prompt("Do you like flower?");
+        name = name.toLocaleLowerCase();
+        if (name === "yes") {
+          let flower = prompt("What is your favourite flower?");
+          alert(`Wow! ${flower} is a very beautiful flower!`);
+        } else {
+          if (name === "no") {
+            alert("Sorry! I hope you will find your favourite flower soon!");
+          } else {
+            alert("Please enter your answer again!");
+          }
+        }
+      }
+
+      let chooseButton = document.querySelector(".chooseFlower");
+      chooseButton.addEventListener("click", choose);
+    </script>
+  </body>
+</html>
